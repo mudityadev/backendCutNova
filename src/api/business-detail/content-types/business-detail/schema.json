@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_details",
+  "info": {
+    "singularName": "business-detail",
+    "pluralName": "business-details",
+    "displayName": "BusinessDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "businessDetail"
+    },
+    "businessName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "address": {
+      "type": "json"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": false,
+      "maxLength": 255,
+      "unique": true
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "business"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "business"
+    }
+  }
+}
