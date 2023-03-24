@@ -46,11 +46,11 @@
       "target": "api::comment.comment",
       "mappedBy": "post"
     },
-    "users": {
+    "tag": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "likedPosts"
+      "inversedBy": "likedPosts"
     },
     "user": {
       "type": "relation",

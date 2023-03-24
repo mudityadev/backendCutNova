@@ -94,12 +94,6 @@
       "target": "api::post.post",
       "mappedBy": "user"
     },
-    "comment": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::comment.comment",
-      "mappedBy": "user"
-    },
     "appointments": {
       "type": "relation",
       "relation": "oneToOne",
@@ -112,17 +106,47 @@
       "target": "api::order.order",
       "inversedBy": "user"
     },
-    "likedPosts": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::post.post",
-      "inversedBy": "users"
-    },
     "postsLikes": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::post.post",
       "mappedBy": "likes"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "user"
+    },
+    "likedPosts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "mappedBy": "tag"
+    },
+    "followers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "users"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "followers"
+    },
+    "following": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "users_"
+    },
+    "users_": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "following"
     }
   }
 }
