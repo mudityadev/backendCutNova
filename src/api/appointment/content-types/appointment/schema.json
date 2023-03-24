@@ -4,10 +4,11 @@
   "info": {
     "singularName": "appointment",
     "pluralName": "appointments",
-    "displayName": "Appointment"
+    "displayName": "Appointment",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

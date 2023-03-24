@@ -88,9 +88,9 @@
       "target": "api::business-detail.business-detail",
       "mappedBy": "user"
     },
-    "post": {
+    "posts": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::post.post",
       "mappedBy": "user"
     },
