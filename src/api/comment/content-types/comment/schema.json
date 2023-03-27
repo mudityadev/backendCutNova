@@ -23,12 +23,6 @@
       "required": true,
       "maxLength": 255
     },
-    "createdTime": {
-      "type": "datetime"
-    },
-    "updatedTime": {
-      "type": "datetime"
-    },
     "post": {
       "type": "relation",
       "relation": "manyToOne",

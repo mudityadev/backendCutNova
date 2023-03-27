@@ -33,13 +33,6 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "postsLikes"
     },
-    "createdDate": {
-      "type": "date",
-      "required": false
-    },
-    "updatedDate": {
-      "type": "date"
-    },
     "comments": {
       "type": "relation",
       "relation": "oneToMany",

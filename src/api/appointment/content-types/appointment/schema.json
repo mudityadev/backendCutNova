@@ -33,12 +33,6 @@
         "Completed"
       ]
     },
-    "createdDate": {
-      "type": "date"
-    },
-    "updatedDate": {
-      "type": "date"
-    },
     "user": {
       "type": "relation",
       "relation": "oneToOne",

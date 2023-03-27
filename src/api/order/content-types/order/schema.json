@@ -44,17 +44,11 @@
         "Cancelled"
       ]
     },
-    "createdDate": {
-      "type": "date"
-    },
-    "updatedDate": {
-      "type": "date"
-    },
     "user": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "orders"
+      "inversedBy": "orders"
     }
   }
 }
