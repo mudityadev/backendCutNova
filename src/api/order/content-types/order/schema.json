@@ -4,10 +4,11 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "Order"
+    "displayName": "Order",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -43,17 +44,11 @@
         "Cancelled"
       ]
     },
-    "createdDate": {
-      "type": "date"
-    },
-    "updatedDate": {
-      "type": "date"
-    },
     "user": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "orders"
+      "inversedBy": "orders"
     }
   }
 }

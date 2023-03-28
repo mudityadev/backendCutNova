@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "post"
-    },
     "image": {
       "type": "media",
       "multiple": true,
@@ -39,28 +33,23 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "postsLikes"
     },
-    "createdDate": {
-      "type": "date",
-      "required": false
-    },
-    "updatedDate": {
-      "type": "date"
-    },
     "comments": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "post"
     },
-    "users": {
+    "tag": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "likedPosts"
+      "inversedBy": "likedPosts"
     },
-    "like": {
-      "type": "biginteger",
-      "min": "0"
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "posts"
     }
   }
 }

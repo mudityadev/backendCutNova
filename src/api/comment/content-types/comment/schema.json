@@ -4,7 +4,8 @@
   "info": {
     "singularName": "comment",
     "pluralName": "comments",
-    "displayName": "Comment"
+    "displayName": "Comment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,20 +14,14 @@
   "attributes": {
     "user": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "comment"
+      "inversedBy": "comments"
     },
     "content": {
       "type": "string",
       "required": true,
       "maxLength": 255
-    },
-    "createdTime": {
-      "type": "datetime"
-    },
-    "updatedTime": {
-      "type": "datetime"
     },
     "post": {
       "type": "relation",

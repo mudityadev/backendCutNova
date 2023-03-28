@@ -1,57 +1,76 @@
-# 🚀 Getting started with Strapi
+1. Search
+3. Notification
+4. Message and Chat
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+SMTP Server
+Redis
+Docker
 
-### `develop`
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+Write the following the title for folder and for each api for postman 
 
-```
-npm run develop
-# or
-yarn develop
-```
 
-### `start`
+Appointment:
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+Create: POST {{URL3}}/api/appointments
+Delete: DELETE {{URL3}}/api/appointments/:id
+Find: GET {{URL3}}/api/appointments
+FindOne: GET {{URL3}}/api/appointments/:id
+Update: PUT {{URL3}}/api/appointments/:id
 
-```
-npm run start
-# or
-yarn start
-```
+Business-detail:
 
-### `build`
+Create: POST {{URL3}}/api/business-details
+Delete: DELETE {{URL3}}/api/business-details/:id
+Find: GET {{URL3}}/api/business-details
+FindOne: GET {{URL3}}/api/business-details/:id
+Update: PUT {{URL3}}/api/business-details/:id
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+Comment:
 
-```
-npm run build
-# or
-yarn build
-```
+Create: POST {{URL3}}/api/comments
+Delete: DELETE {{URL3}}/api/comments/:id
+Find: GET {{URL3}}/api/comments
+FindOne: GET {{URL3}}/api/comments/:id
+Update: PUT {{URL3}}/api/comments/:id
 
-## ⚙️ Deployment
+Order:
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+Create: POST {{URL3}}/api/orders
+Delete: DELETE {{URL3}}/api/orders/:id
+Find: GET {{URL3}}/api/orders
+FindOne: GET {{URL3}}/api/orders/:id
+Update: PUT {{URL3}}/api/orders/:id
 
-## 📚 Learn more
+Post:
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+Create: POST {{URL3}}/api/posts
+Delete: DELETE {{URL3}}/api/posts/:id
+Find: GET {{URL3}}/api/posts
+FindOne: GET {{URL3}}/api/posts/:id
+Update: PUT {{URL3}}/api/posts/:id
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+Product:
 
-## ✨ Community
+Create: POST {{URL3}}/api/products
+Delete: DELETE {{URL3}}/api/products/:id
+Find: GET {{URL3}}/api/products
+FindOne: GET {{URL3}}/api/products/:id
+Update: PUT {{URL3}}/api/products/:id
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+Service:
 
----
+Create: POST {{URL3}}/api/services
+Delete: DELETE {{URL3}}/api/services/:id
+Find: GET {{URL3}}/api/services
+FindOne: GET {{URL3}}/api/services/:id
+Update: PUT {{URL3}}/api/services/:id
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+User:
+
+Create: POST {{URL3}}/api/auth/local/register
+Delete: DELETE {{URL3}}/api/users/:id
+Find: GET {{URL3}}/api/users
+FindOne: GET {{URL3}}/api/users/:id
+Update: PUT {{URL3}}/api/users/:id
+

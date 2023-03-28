@@ -4,10 +4,11 @@
   "info": {
     "singularName": "appointment",
     "pluralName": "appointments",
-    "displayName": "Appointment"
+    "displayName": "Appointment",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -31,12 +32,6 @@
         "Cancelled",
         "Completed"
       ]
-    },
-    "createdDate": {
-      "type": "date"
-    },
-    "updatedDate": {
-      "type": "date"
     },
     "user": {
       "type": "relation",
